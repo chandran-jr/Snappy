@@ -1,2 +1,2 @@
 # Javascript
-As a learning part of Javascipt. 
+Easy js brush-up.
