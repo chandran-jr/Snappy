@@ -1,0 +1,42 @@
+html {
+    background-color: whitesmoke;
+}
+h1{
+    color: rgb(109, 4, 86);
+    font-weight: bolder;
+    text-decoration: underline;
+}
+h2{
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+h2:hover{
+    color: cornflowerblue;
+
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color:rgb(252, 8, 199);
+}
+@media (min-width: 600px) {
+    .head{
+    margin-left: 560px;
+    margin-top: 60px;
+    padding-bottom: 0%;
+    font-size: 30px;
+}
+
+@media (max-width: 300px){
+    .head{
+    margin-left: 10px;
+    margin-top: 60px;
+    padding-bottom: 0%;
+    font-size: 20px;
+}
+}
+}
+  
