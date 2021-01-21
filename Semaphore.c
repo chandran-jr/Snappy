@@ -6,6 +6,9 @@
 /*
 This program provides a possible solution for producer-consumer problem using mutex and semaphore.
 I have used 5 producers and 5 consumers to demonstrate the solution. You can always play with these values.
+
+https://github.com/codophobia/producer-consumer-problem-solution-in-c
+
 */
 
 #define MaxItems 5 // Maximum items a producer can produce or a consumer can consume
