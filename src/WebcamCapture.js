@@ -1,4 +1,6 @@
 import React from 'react';
+import Webcam from 'react-webcam';
+
 
 const videoConstraints = {
     width: 250,
@@ -8,8 +10,8 @@ const videoConstraints = {
 
 function WebcamCapture() {
     return (
-        <div>
-            
+        <div className="webcamCapture">
+            <Webcam/>
         </div>
     )
 }
