@@ -2,7 +2,7 @@ import React from 'react';
 import Webcam from 'react-webcam';
 
 
-const videoConstraints = {
+const VideoConstraints = {
     width: 250,
     height: 400,
     facingMode: 'user',
@@ -11,7 +11,12 @@ const videoConstraints = {
 function WebcamCapture() {
     return (
         <div className="webcamCapture">
-            <Webcam/>
+            <Webcam
+                audio = {false}
+                height = {VideoConstraints.height}
+                
+
+            />
         </div>
     )
 }
