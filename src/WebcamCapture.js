@@ -10,16 +10,17 @@ const VideoConstraints = {
 
 function WebcamCapture() {
 
-    const webcamRef = useRef(null)
+    const WebcamRef = useRef(null)
 
     return (
         <div className="webcamCapture">
             <Webcam
                 audio = {false}
                 height = {VideoConstraints.height}
-                ref = {webcamRef}
+                ref = {WebcamRef}
                 screenshotFormat = "image/jpeg"
                 width = {VideoConstraints.width}
+                videoConstraints = {VideoConstraints}
 
             />
         </div>
