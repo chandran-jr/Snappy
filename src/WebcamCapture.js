@@ -34,6 +34,7 @@ function WebcamCapture() {
 
             className="webcamCapture__button"
             onClick={capture}
+            fontSize = "large"
         />
 
         </div>
