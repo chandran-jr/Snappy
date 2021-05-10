@@ -12,11 +12,10 @@ const VideoConstraints = {
 function WebcamCapture() {
 
     const WebcamRef = useRef(null);
-    const [image,setImage] = useState(null);
 
     const capture = useCallback(() => {
             const imgsrc = WebcamRef.current.getScreenshot();
-            setImage(imgsrc);
+            
     }, [WebcamRef])
 
     return (
@@ -38,8 +37,6 @@ function WebcamCapture() {
             onClick={capture}
             fontSize = "large"
         />
-
-        <img src={image} alt="snap" />
 
         </div>
     )
