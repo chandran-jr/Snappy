@@ -14,7 +14,7 @@ function WebcamCapture() {
     const WebcamRef = useRef(null)
 
     const capture = useCallback(() => {
-
+            const imgsrc = WebcamRef.current.getScreenshot();
     }, [])
 
     return (
