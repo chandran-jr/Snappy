@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Preview from './Preview';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         <Switch>
           <Route exact path="/">
           <WebcamCapture/>
+          </Route>
+          <Route path="/preview">
+          <Preview/>
           </Route>
         </Switch>
       </div>
