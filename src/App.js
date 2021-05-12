@@ -11,8 +11,6 @@ import Preview from './Preview';
 function App() {
   return (
     <div className="app">
-
-
 <Router>
       <div className="app__body">
         <Switch>
