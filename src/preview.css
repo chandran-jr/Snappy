@@ -25,3 +25,27 @@
     margin-bottom: 8px;
     cursor: pointer;
 }
+
+.preview__footer{
+    position: absolute;
+    bottom: 0;
+    right: -25px;
+    transform: translate(-50%, -50%);
+    background-color: yellow;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.preview__sendIcon{
+    
+}
+
+.preview__footer > h2 {
+    font-size: 15px;
+    margin-right: 3px;
+}
