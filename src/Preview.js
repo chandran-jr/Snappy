@@ -11,6 +11,8 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 import CropIcon from '@material-ui/icons/Crop';
 import TimerIcon from '@material-ui/icons/Timer';
 import SendIcon from '@material-ui/icons/Send';
+import {v4 as uuid} from 'uuid';
+import {db , storage} from './firebase';
 import './preview.css';
 
 function Preview() {
@@ -30,7 +32,21 @@ function Preview() {
     }
 
     const sendPost = () => {
-        
+        const id = uuid();
+        const uploadTask = storage.ref(`posts/${id}`).putString(cameraImage, 'data_url');
+
+        uploadTask.on('state_changed', null , (error) => {
+            console.log(error);
+        },() => {
+            storage.ref('posts').child(id).getDownloadURL().then((url) => {
+                db.collection('posts').add({
+                    imageURL : url,
+                    username : 'Govind',
+                    //profilePic : profilePic
+                    read : false,
+                });
+            })
+        })
     }
 
     return (
