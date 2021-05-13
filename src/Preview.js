@@ -46,6 +46,9 @@ function Preview() {
          </div>
 
             <img src={cameraImage} alt=""/>
+            <div className="preview__footer">
+                
+            </div>
         </div>
     );
 }
