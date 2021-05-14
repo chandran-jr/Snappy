@@ -1,22 +1,22 @@
 .chats{
     position: relative;
     height: 400px;
-    width: 200px;
+    width: 250px;
 }
 
 .chats__header{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
+    padding-left: 10px;
     padding-right: 10px;
     height: 50px;
     background-color: orange;
 }
 
 .chats__avatar{
-    height: 26px !important;
-    width: 26px !important;
+    height: 25px !important;
+    width: 25px !important;
 }
 
 .chats__searchbar{
@@ -34,4 +34,9 @@
     font-size: 12px;
     flex: 1;
     color: white;
+}
+
+.chats__searchbar > input::placeholder{
+    color: white;
+    opacity: 1;
 }
