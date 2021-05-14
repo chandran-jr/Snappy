@@ -15,6 +15,9 @@ function Chats() {
                 </div>
                 <ChatBubbleIcon className="chats__chatBubbleIcon" />
             </div>
+            <div className="chats__posts">
+                
+            </div>
         </div>
     )
 }

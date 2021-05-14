@@ -36,6 +36,12 @@
     color: white;
 }
 
+.chats__posts{
+    height: 359px;
+    background-color: white;
+    
+}
+
 .chats__searchbar > input::placeholder{
     color: white;
     opacity: 1;
