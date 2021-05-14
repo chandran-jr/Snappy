@@ -39,7 +39,7 @@
 .chats__posts{
     height: 359px;
     background-color: white;
-    
+    box-shadow: 1px -7px -7px -6px rgba(0,0,0, 0.44);
 }
 
 .chats__searchbar > input::placeholder{
