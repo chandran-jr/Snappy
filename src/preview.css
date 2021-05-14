@@ -31,7 +31,7 @@
     bottom: 0;
     right: -25px;
     transform: translate(-50%, -50%);
-    background-color: yellow;
+    background-image: linear-gradient(to bottom right, #5433FF,#20BDFF,#A5FECB);
     color: black;
     display: flex;
     justify-content: space-evenly;
@@ -43,9 +43,11 @@
 
 .preview__sendIcon{
     font-size: 15px !important;
+    color : rgb(243, 239, 239);
 }
 
 .preview__footer > h2 {
     font-size: 15px;
     margin-right: 3px;
+    color: rgb(243, 239, 239);
 }
