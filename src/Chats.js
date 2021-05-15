@@ -1,10 +1,18 @@
 import { Avatar } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import {db} from './firebase';
 import './Chats.css';
 
 function Chats() {
+
+    const [posts,setPosts] = useState([]);
+
+    useEffect(() => {
+        db.collection('posts').orderBy()
+    },[])
+
     return (
         <div className="chats">
             <div className="chats__header">
