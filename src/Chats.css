@@ -47,7 +47,7 @@
 }
 
 
-.chats__posts::webkit-scrollbar{
+.chats__posts::-webkit-scrollbar{
     display: none;
 }
 
