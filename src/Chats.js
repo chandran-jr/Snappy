@@ -4,6 +4,7 @@ import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import React, { useEffect, useState } from 'react';
 import {db} from './firebase';
 import './Chats.css';
+import Chat from './Chat';
 
 function Chats() {
 
@@ -30,7 +31,19 @@ function Chats() {
                 <ChatBubbleIcon className="chats__chatBubbleIcon" />
             </div>
             <div className="chats__posts">
-                
+                {posts.map(({id,data:{profilePic, username,timestamp,imageUrl,read}}) => (
+
+                    <Chat key={id}
+                          id={id}
+                          username={username}
+                          profilePic={profilePic}
+                          timestamp={timestamp}
+                          imageUrl={imageUrl}
+                          read={read}
+                          />
+                )
+
+                )}
             </div>
         </div>
     )
