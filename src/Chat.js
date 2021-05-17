@@ -6,21 +6,21 @@ import './Chat.css';
 import {db} from './firebase';
 import {useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
-import { selectedImage } from './features/appSlice';
+import { selectImage } from './features/appSlice';
 
-function Chat({id,timestamp,username, profilePic, read, imageUrl}) {
+function Chat({id, username, timestamp, imageUrl, read,  profilePic,}) {
 
      const dispatch = useDispatch();
      const history = useHistory();
 
     const open = () => {
         if(!read) {
-            dispatch(selectedImage(imageUrl));
+            dispatch(selectImage(imageUrl));
             db.collection('posts').doc(id).set({
                 read : true
             }, {merge: true});
 
-            history.push('/chats/view')
+            history.push('/chats/view');
         }
     }
     
