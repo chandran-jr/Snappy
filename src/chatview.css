@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-.chatview_timer{
+.chatview__timer{
     position: absolute;
     top: 0;
     right: 0;
