@@ -9,12 +9,20 @@ import {
 import Preview from './Preview';
 import Chats from './Chats';
 import ChatView from './ChatView';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from './features/appSlice';
+import Login from './Login';
 
 function App() {
+
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
   return (
     <div className="app">
 <Router>
-      <div className="app__body">
+    {!user ? (<Login/>) : 
+    <div className="app__body">
         <Switch>
           <Route exact path="/">
           <WebcamCapture/>
@@ -29,9 +37,11 @@ function App() {
           <Preview/>
           </Route>
         </Switch>
-      </div>
+      </div> 
+      }
     </Router>
     </div>
+      
   );
 }
 

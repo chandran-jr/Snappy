@@ -1,0 +1,25 @@
+.login{
+    background-image: linear-gradient(to bottom right, #5433FF,#20BDFF,#A5FECB);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+
+}
+.login__container > h2{
+    color: white;
+    background-image: linear-gradient(to bottom right, #5433FF,#20BDFF,#A5FECB);
+    padding: 10px;
+}
+
+.login__container > img{
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.login__container{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
