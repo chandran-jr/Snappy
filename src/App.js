@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Preview from './Preview';
 import Chats from './Chats';
+import ChatView from './ChatView';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Chats/>
           </Route>
           <Route exact path="/chats/view">
-          <Chats/>
+          <ChatView/>
           </Route>
           <Route path="/preview">
           <Preview/>
