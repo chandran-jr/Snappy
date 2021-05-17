@@ -41,7 +41,7 @@ function Preview() {
         },() => {
             storage.ref('posts').child(id).getDownloadURL().then((url) => {
                 db.collection('posts').add({
-                    imageURL : url,
+                    imageUrl : url,
                     username : 'Govind',
                     //profilePic : profilePic
                     read : false,
