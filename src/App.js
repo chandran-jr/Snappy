@@ -16,7 +16,6 @@ import Login from './Login';
 function App() {
 
   const user = useSelector(selectUser);
-  const dispatch = useDispatch();
 
   return (
     <div className="app">
