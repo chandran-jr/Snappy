@@ -18,42 +18,30 @@ export const incrementAsync = createAsyncThunk(
 export const appSlice = createSlice({
   name: 'app',
   initialState,
+  user:null,
+  selectedImage:null,
 
   reducers: {
-    increment: (state) => {
-
-      state.value += 1;
+    login: (state, action) => {
+      state.user = action.payload;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    logout: (state) => {
+      state.user = null;
     },
- 
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    selectedImage: (state, action) => {
+      state.selectedImage = action.payload;
     },
+    resetImage: (state) => {
+      state.selectedImage = null;
+    }
   },
 
-  extraReducers: (builder) => {
-    builder
-      .addCase(incrementAsync.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(incrementAsync.fulfilled, (state, action) => {
-        state.status = 'idle';
-        state.value += action.payload;
-      });
-  },
 });
 
-export const { increment, decrement, incrementByAmount } = appSlice.actions;
+export const { login, logout, selectedImage, resetImage} = appSlice.actions;
 
-export const selectApp = (state) => state.app.value;
+export const selectUser = (state) => state.app.user;
 
-export const incrementIfOdd = (amount) => (dispatch, getState) => {
-  const currentValue = selectApp(getState());
-  if (currentValue % 2 === 1) {
-    dispatch(incrementByAmount(amount));
-  }
-};
+export const selectSelectedImage = (state) => state.app.selectedImage;
 
 export default appSlice.reducer;

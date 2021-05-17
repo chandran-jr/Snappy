@@ -21,6 +21,9 @@ function App() {
           <Route exact path="/chats">
           <Chats/>
           </Route>
+          <Route exact path="/chats/view">
+          <Chats/>
+          </Route>
           <Route path="/preview">
           <Preview/>
           </Route>
