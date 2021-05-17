@@ -1,3 +1,31 @@
-*{
-    
+.chat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid whitesmoke;
+    cursor: pointer;
+}
+
+.chat__avatar{
+    height: 35px !important;
+    width: 35px !important;
+}
+
+.chat__stopicon{
+    color: #ed3b55;
+}
+
+.chat__info > h4 {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.chat__info > p{
+    font-size: 9px;
+}
+
+.chat__info{
+    flex: 1;
+    padding-left: 5px;
 }
