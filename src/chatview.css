@@ -5,3 +5,10 @@
 .chatview > img{
     cursor: pointer;
 }
+
+.chatview_timer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
