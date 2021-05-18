@@ -15,8 +15,9 @@
 }
 
 .chats__avatar{
-    height: 25px !important;
-    width: 25px !important;
+    height: 30px !important;
+    width: 30px !important;
+    cursor: pointer;
 }
 
 .chats__searchbar{
