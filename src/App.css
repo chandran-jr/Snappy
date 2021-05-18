@@ -11,3 +11,11 @@
     background-color: white;
     height: 400px;
 }
+
+.app__body{
+    background: url("https://www.pngkey.com/png/full/859-8598072_picture-freeuse-library-silhouette-mobile-at-getdrawings-cell.png") no-repeat center;
+    background-size: contain;
+    height: 400px;
+    padding: 74px;
+
+}
