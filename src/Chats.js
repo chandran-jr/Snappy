@@ -3,15 +3,19 @@ import SearchIcon from '@material-ui/icons/Search';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import React, { useEffect, useState } from 'react';
 import {auth, db} from './firebase';
+import { useHistory } from 'react-router-dom';
 import './Chats.css';
 import Chat from './Chat';
 import { selectUser } from './features/appSlice';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { resetCameraImage } from './features/cameraSlice';
 
 function Chats() {
 
     const [posts,setPosts] = useState([]);
     const user = useSelector(selectUser);
+    const dispatch = useDispatch();
+    const history = useHistory();
 
     useEffect(() => {
         db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(
@@ -24,7 +28,8 @@ function Chats() {
     },[])
 
     const takeSnap = () => {
-
+        dispatch(resetCameraImage());
+        history.replace("/");
     };
 
     return (

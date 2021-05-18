@@ -39,7 +39,8 @@ function App() {
 <Router>
     {!user ? (<Login/>) : 
     <div className="app__body">
-        <Switch>
+      <div className="app__bodybg">
+      <Switch>
           <Route exact path="/">
           <WebcamCapture/>
           </Route>
@@ -53,6 +54,7 @@ function App() {
           <Preview/>
           </Route>
         </Switch>
+      </div>
       </div> 
       }
     </Router>
