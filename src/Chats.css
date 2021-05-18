@@ -56,3 +56,19 @@
     color: white;
     opacity: 1;
 }
+
+.chats__takePic{
+    position: absolute;
+    background-color: white;
+    border-radius: 200px;
+    color: grey;
+    font-size: 40px !important;
+    cursor: pointer;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chats__takePic:hover{
+    opacity: 0.6
+}

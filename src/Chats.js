@@ -1,6 +1,5 @@
 import { Avatar } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import React, { useEffect, useState } from 'react';
 import {auth, db} from './firebase';
@@ -36,7 +35,6 @@ function Chats() {
                     <SearchIcon className="chats__searchIcon" />
                     <input type="text" placeholder="Search" />
                 </div>
-                <ChatBubbleIcon className="chats__chatBubbleIcon" />
             </div>
             <div className="chats__posts">
                 {posts.map(({id, 
